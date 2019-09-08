@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>distributed-transaction--examples</artifactId>
+        <groupId>net.riking</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>lcn-example-springcloud</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>eureka</module>
+        <module>consumer-orders</module>
+        <module>provider-wallet</module>
+        <module>provider-fruits</module>
+    </modules>
+<dependencies>
+    <!-- SpringBoot整合Web组件 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>com.codingapi.txlcn</groupId>
+        <artifactId>txlcn-tc</artifactId>
+        <version>5.0.2.RELEASE</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.codingapi.txlcn</groupId>
+        <artifactId>txlcn-txmsg-netty</artifactId>
+        <version>5.0.2.RELEASE</version>
+    </dependency>
+    <!--mybatis plus依赖包-->
+    <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>mybatis-plus-boot-starter</artifactId>
+        <version>3.1.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis-spring</artifactId>
+        <version>2.0.0</version>
+    </dependency>
+
+</dependencies>
+
+</project>

@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+
+
+spring:
+  application:
+    name: consumer-orders
+
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.42.98:3308/tx-manager?characterEncoding=UTF-8
+    username: root
+    password: root
+
+feign:
+  hystrix:
+    enabled: true
+
+
+###服务注册到eureka地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:7001}/eureka/
